@@ -2,7 +2,7 @@
   "name": "note_app_sheena_lovendino",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/sheenalovendino/note_app_sheena_lovendino.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sheena Lovendino",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sheenalovendino/note_app_sheena_lovendino/issues"
