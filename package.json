@@ -1,0 +1,20 @@
+{
+  "name": "note_app_sheena_lovendino",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sheenalovendino/note_app_sheena_lovendino.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sheenalovendino/note_app_sheena_lovendino/issues"
+  },
+  "homepage": "https://github.com/sheenalovendino/note_app_sheena_lovendino#readme"
+}
