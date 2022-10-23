@@ -1,1 +1,3 @@
-# note_app_sheena_lovendino
+# Note app
+
+# Sheena Lovendino, BSIT 3-2
