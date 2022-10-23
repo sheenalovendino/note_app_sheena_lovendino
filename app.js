@@ -1,44 +1,46 @@
-const read = require('./read')
 const add = require('./add')
-const del = require('./del')
-//const present = require('./present')
+const read = require = require('./read')
+const present = require('./present')
 const update = require('./update')
 
-const data = process.argv
+const cmd = process.argv
 
-if (data[2] == 'add') {
+var note = {}
+
+if(cmd[2] == 'add') {
+
+    note = {
+        id: cmd[3],
+        title: cmd[4],
+        body: cmd[5]
+    }
+
+    var oldNote = read()
+
+    add(note, oldNote)
+}
+
+if (cmd[2] == 'read') {
+    present(read())
+}
+
+if (cmd[2] == 'delete') {
+    let id = cmd[3]
+    let oldNote = read()
+    let del = require('./del')
+    del(id, oldNote)
+    console.log(read())
+}
+
+if (cmd[2] == 'update') {
 
     const note = {
-        "id": data[3],
-        "title": data[4],
-        "body": data[5],
-    }
-
-    const oldNote = read()
-    add(note, oldNote)
-
-}
-
-if (data[2] == 'read') {
-    console.log(read())
-
-}
-
-if (data[2] == 'delete') {
-    id = data[3]
-    oldNote = read()
-    del(id.oldNote)
-    read()
-
-}
-
-if (data[2] == 'update') {
-    let note = {
-        id: data[3],
-        title: data[4],
-        body: data[5],
+        id: cmd[3],
+        title: cmd[4],
+        body: cmd[5],
     }
     const oldNote = read()
-    update (note, oldNote)
-    console.log (update)
+    update(note, oldNote)
+    let present = require('./present')
+    present(read())
 }
