@@ -1,44 +1,38 @@
-const add = require('./add');
-const read = require('./read');
-const write = require('./write');
-//const del = require('./del');
-//const present = require('./present');
-const update = require('./update');
+const add = require('./add')
+const read = require('./read')
+const present = require('./present')
+const update = require('./updata')
 
-const data = process.argv
+const cmd = process.argv
 
 var note = {}
 
-if(data[2] == 'add') {
+if(cmd[2] == 'add') {
+
     note = {
-        id: data[3],
-        title: data[4],
-        body: data[5]
+        id: cmd[3],
+        title: cmd[4],
+        body: cmd[5],
     }
-    var oldNote = read();
+
+    var oldNote = read()
+
     add(note, oldNote)
 }
-if(data[2] == 'read') {
-    const present = require('./present');
 
+if(cmd[2] == 'read') {
     present(read())
 }
-if(data[2] == 'delete') {
-    let id = data[3];
-    let oldNote = read();
-    let del = require('./del');
-    del(id.oldNote);
 
-    console.log(read());
-}
+if (cmd[2] == 'update') {
 
-if (data[2] == 'update') {
-    let note = {
-        id: data[3],
-        title: data[4],
-        body: data[5],
+    const note = {
+        id: cmd[3],
+        title: cmd[4],
+        body: cmd[5],
     }
-    const oldNote = read ()
-    update (note, oldNote)
-    console.log (update)
+    const oldNote = read()
+    update(note, oldNote)
+    let present = require('./present')
+    present(read())
 }
