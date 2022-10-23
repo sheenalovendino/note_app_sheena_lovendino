@@ -1,11 +1,11 @@
 const fs = require('fs')
 
 const del = function(id, oldNote) {
-    const note = JSON.parse(oldNote)
-    const finalNote = note.filter(function(n,i) {
-        return n.id!==id
+    let note = JSON.parse(oldNote)
+    let newNote = note.filter(function(n, indx) {
+        return n.id !== id
     })
-    fs.writeFileSync('note.txt', JSON.stringify(finalNote))
+    fs.writeFileSync('note.txt', JSON.stringify(newNote))
 }
 
 module.exports = del
