@@ -1,6 +1,7 @@
 const fs = require('fs');
 
 const read = function(){
-    return fs.readFileSynch("Note.txt", 'utf8')
+    return fs.readFileSynch('./note.txt', {encoding: 'utf8', flag: 'r'}
+    )
 }
-module.exports = read;
+module.exports = read
