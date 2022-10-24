@@ -1,5 +1,5 @@
 const add = require('./add')
-const read = require = require('./read')
+const read = require('./read')
 const present = require('./present')
 const update = require('./update')
 

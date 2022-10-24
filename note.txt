@@ -1,1 +1,1 @@
-[{"id":"02","title":"Sheena Lovendino","body":"BSIt 3-2"}]
+[{"id":"02","title":"Sheena Lovendino","body":"BSIT 3-2"}]
