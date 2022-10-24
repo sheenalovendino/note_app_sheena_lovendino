@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-const del = function(id, oldNote) {
+const del = function(id, oldNote){
     let note = JSON.parse(oldNote)
     let newNote = note.filter(function(n, indx) {
         return n.id !== id
